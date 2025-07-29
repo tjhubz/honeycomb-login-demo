@@ -35,84 +35,85 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen bg-white flex flex-col">
-      {/* Header Navigation */}
-      <header className="flex items-center justify-between px-6 py-4 bg-white border-b border-gray-100">
-        <div className="flex items-center">
-          <Image
-            src="https://cdn.honeycomb.credit/hclogo.svg"
-            alt="Honeycomb Credit"
-            width={120}
-            height={40}
-            className="h-10 w-auto"
-          />
-        </div>
-
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
-          <Link href="#" className="text-gray-700 hover:text-gray-900 font-medium">
-            Invest Now
-          </Link>
-          <Link href="#" className="text-gray-700 hover:text-gray-900 font-medium">
-            Business Owners
-          </Link>
-          <Link href="#" className="text-gray-700 hover:text-gray-900 font-medium">
-            Investors
-          </Link>
-          <Link href="#" className="text-gray-700 hover:text-gray-900 font-medium">
-            About Us
-          </Link>
-          <Link href="#" className="text-gray-700 hover:text-gray-900 font-medium">
-            Learn
-          </Link>
-        </nav>
-
-        {/* Desktop Sign In Button */}
-        <Button className="hidden md:block bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-2 rounded-md">
-          Sign in
-        </Button>
-
-        {/* Mobile Hamburger Menu */}
-        <button
-          className="md:hidden flex flex-col items-center justify-center w-8 h-8 space-y-1"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          <span className={`block w-6 h-0.5 bg-gray-700 transition-transform duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
-          <span className={`block w-6 h-0.5 bg-gray-700 transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
-          <span className={`block w-6 h-0.5 bg-gray-700 transition-transform duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
-        </button>
-
-        {/* Mobile Menu Dropdown */}
-        {isMobileMenuOpen && (
-          <div className="absolute top-full left-0 right-0 bg-white border-b border-gray-100 shadow-lg md:hidden z-50">
-            <nav className="flex flex-col p-4 space-y-4">
-              <Link href="#" className="text-gray-700 hover:text-gray-900 font-medium py-2">
-                Invest Now
-              </Link>
-              <Link href="#" className="text-gray-700 hover:text-gray-900 font-medium py-2">
-                Business Owners
-              </Link>
-              <Link href="#" className="text-gray-700 hover:text-gray-900 font-medium py-2">
-                Investors
-              </Link>
-              <Link href="#" className="text-gray-700 hover:text-gray-900 font-medium py-2">
-                About Us
-              </Link>
-              <Link href="#" className="text-gray-700 hover:text-gray-900 font-medium py-2">
-                Learn
-              </Link>
-              <Button className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-2 rounded-md mt-4">
-                Sign in
-              </Button>
-            </nav>
+    <div className="bg-white">
+      {/* Navbar + Background Image Section - Exactly 100vh */}
+      <div className="h-screen flex flex-col">
+        {/* Header Navigation */}
+        <header className="flex-shrink-0 flex items-center justify-between px-6 py-4 bg-white border-b border-gray-100 relative z-20">
+          <div className="flex items-center">
+            <Image
+              src="https://cdn.honeycomb.credit/hclogo.svg"
+              alt="Honeycomb Credit"
+              width={120}
+              height={40}
+              className="h-10 w-auto"
+            />
           </div>
-        )}
-      </header>
 
-      {/* Main Content */}
-      <div className="flex-1">
-        <main className="relative h-[calc(100vh-80px)] md:h-[calc(100vh-80px)]">
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-8">
+            <Link href="#" className="text-gray-700 hover:text-gray-900 font-medium">
+              Invest Now
+            </Link>
+            <Link href="#" className="text-gray-700 hover:text-gray-900 font-medium">
+              Business Owners
+            </Link>
+            <Link href="#" className="text-gray-700 hover:text-gray-900 font-medium">
+              Investors
+            </Link>
+            <Link href="#" className="text-gray-700 hover:text-gray-900 font-medium">
+              About Us
+            </Link>
+            <Link href="#" className="text-gray-700 hover:text-gray-900 font-medium">
+              Learn
+            </Link>
+          </nav>
+
+          {/* Desktop Sign In Button */}
+          <Button className="hidden md:block bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-2 rounded-md">
+            Sign in
+          </Button>
+
+          {/* Mobile Hamburger Menu */}
+          <button
+            className="md:hidden flex flex-col items-center justify-center w-8 h-8 space-y-1"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            <span className={`block w-6 h-0.5 bg-gray-700 transition-transform duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
+            <span className={`block w-6 h-0.5 bg-gray-700 transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
+            <span className={`block w-6 h-0.5 bg-gray-700 transition-transform duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
+          </button>
+
+          {/* Mobile Menu Dropdown */}
+          {isMobileMenuOpen && (
+            <div className="absolute top-full left-0 right-0 bg-white border-b border-gray-100 shadow-lg md:hidden z-50">
+              <nav className="flex flex-col p-4 space-y-4">
+                <Link href="#" className="text-gray-700 hover:text-gray-900 font-medium py-2">
+                  Invest Now
+                </Link>
+                <Link href="#" className="text-gray-700 hover:text-gray-900 font-medium py-2">
+                  Business Owners
+                </Link>
+                <Link href="#" className="text-gray-700 hover:text-gray-900 font-medium py-2">
+                  Investors
+                </Link>
+                <Link href="#" className="text-gray-700 hover:text-gray-900 font-medium py-2">
+                  About Us
+                </Link>
+                <Link href="#" className="text-gray-700 hover:text-gray-900 font-medium py-2">
+                  Learn
+                </Link>
+                <Button className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-2 rounded-md mt-4">
+                  Sign in
+                </Button>
+              </nav>
+            </div>
+          )}
+        </header>
+
+        {/* Main Content - Dynamically fills remaining viewport space */}
+        <main className="relative flex-1 min-h-0">
           {/* Background Image - Hidden on mobile */}
           <div className="absolute inset-0 hidden md:block">
             <Image
